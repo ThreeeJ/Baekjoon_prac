@@ -10,7 +10,7 @@ public class Main {
         String N = br.readLine();
         Vector<Integer> v = new Vector<>();
         for (int i=0; i<N.length(); i++) {
-            v.add((int)N.charAt(i) - '0');
+            v.add(N.charAt(i) - '0');
         }
 
         int cnt = 0;
