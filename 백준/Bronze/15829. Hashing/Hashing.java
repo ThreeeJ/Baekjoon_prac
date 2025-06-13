@@ -10,10 +10,12 @@ public class Main {
         String s = br.readLine();
 
         long total = 0;
-        for (int i=0; i<s.length(); i++) {
-            int n = s.charAt(i) - 'a' + 1;
-            total += n * (long)Math.pow(31, i);
+        long pow = 1;
+        for(int i = 0; i < L; i++) {
+            total += ((s.charAt(i) - 'a' + 1) * pow);
+            pow = (pow * 31) % 1234567891;
         }
+        total %= 1234567891;
 
         bw.write(String.valueOf(total));
 
